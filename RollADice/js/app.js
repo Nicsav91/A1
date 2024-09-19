@@ -30,7 +30,6 @@ button0.addEventListener("click", function() {
   getRandomIntForComputer();
   showComputerRollResult();
   evaluationResultBool();
-  showEvaluationResult();
   showScoreResult();
 })
 
@@ -46,14 +45,14 @@ function getRandomIntForComputer() {
 function evaluationResultBool () {
   if (playerRoll > computerRoll) {
     playerScore++;
-    return "You win!";
+    showEvaluationResult("You win!");
   }
   if (playerRoll < computerRoll) {
     computerScore++;
-    return "You lose!";
+    showEvaluationResult("You lose!");
   }
   if (playerRoll === computerRoll) {
-  return "It´s a draw!";
+  showComputerRollResult("It´s a draw!");
   }
 }
 
@@ -61,15 +60,15 @@ function evaluationResultBool () {
 
 // VIEWS
 function showPlayerRollResult() {
-  playerRollText.innerHTML = playerRoll
+  playerRollText.innerHTML = playerRoll;
 }
 
 function showComputerRollResult() {
-  computerRollText.innerHTML = computerRoll
+  computerRollText.innerHTML = computerRoll;
 }
 
-function showEvaluationResult() {
-  evaluationRollText.innerHTML = evaluationResultBool();
+function showEvaluationResult(text) {
+  evaluationRollText.innerHTML = text;
 }
 
 function showScoreResult () {
