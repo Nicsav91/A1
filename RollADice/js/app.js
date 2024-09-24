@@ -13,7 +13,14 @@ let playerScoreNumber = document.getElementById("playerScoreNumber");
 let computerScoreNumber = document.getElementById("computerScoreNumber");
 let playerScoreText = document.getElementById("playerScoreText");
 let computerScoreText = document.getElementById("computerScoreText");
+let playerHistory = document.getElementById("playerHistory");
+let computerHistory = document.getElementById("computerHistory");
 
+
+
+// ARRAYS
+const playerScoreHistory = [0];
+const computerScoreHistory = [0];
 
 // DATA
 let playerRoll = 0;
@@ -31,6 +38,7 @@ button0.addEventListener("click", function() {
   showComputerRollResult();
   evaluationResultBool();
   showScoreResult();
+  scoreHistory();
 })
 
 // CONTROLLERS functions. +1 för att få bort nollan
@@ -45,13 +53,19 @@ function getRandomIntForComputer() {
 function evaluationResultBool () {
   if (playerRoll > computerRoll) {
     playerScore++;
+    playerScoreHistory.push(1);
+    computerScoreHistory.push(0);
     showEvaluationResult("You win!");
   }
   if (playerRoll < computerRoll) {
     computerScore++;
+    playerScoreHistory.push(0);
+    computerScoreHistory.push(1);
     showEvaluationResult("You lose!");
   }
   if (playerRoll === computerRoll) {
+    playerScoreHistory.push(0);
+    computerScoreHistory.push(0);
   showComputerRollResult("It´s a draw!");
   }
 }
@@ -74,4 +88,9 @@ function showEvaluationResult(text) {
 function showScoreResult () {
   playerScoreNumber.innerHTML = playerScore;
   computerScoreNumber.innerHTML = computerScore;
+}
+
+function scoreHistory() {
+  playerHistory.innerHTML = playerScoreHistory;
+  computerHistory.innerHTML = computerScoreHistory;
 }
