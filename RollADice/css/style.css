@@ -9,35 +9,40 @@ body{
 }
 
 h1{
+  font-family: 'Courier New', Times, serif;
   font-size: 3rem;
   color: #a38982;
 }
 
+.game-container {
+  border: 2px solid black; /* Svart kant */
+  border-radius: 30px; /* Rundade hörn */
+  padding: 10px; /* Utrymme runt hela innehållet */
+  background-color: #f0eceb; /* Bakgrundsfärg för hela containern */
+  width: 50%; /* Du kan justera bredden som du vill */
+  display: flex;
+  flex-direction: column; /* Behåll elementen i en kolumn */
+  align-items: center; /* Centrera innehållet horisontellt */
+}
+
 .roll-conatiner {
   display: flex;
+  align-items: center;
   justify-content: space-between;
-  width: 30%;
+  width: 70%;
   margin-bottom: -40px;
-  background-color: #e5d8d4;
 }
 
 #typePlayerRollText, #typeComputerRollText {
+  font-family: 'Georgia', Times, serif;
   font-size: 2rem;
   color: #c3a49b;
-}
-
-#typePlayerRollText{
-  align-items: left;
-}
-
-#typeComputerRollText{
-  align-items: right;
 }
 
 .dice-number {
   display: flex;
   justify-content: space-between;
-  width: 20%;
+  width: 50%;
 }
 
 #playerRollText, #computerRollText {
@@ -54,10 +59,56 @@ h1{
 }
 
 #button0 {
-  font-size: 1.5rem;
+  font-family: 'Courier bold', Times, serif;
+  font-size: 2rem;
   color: black;
+  background-color: #a28881;
+  margin-bottom: -30px;
 }
 
 #evaluationRollText {
+  font-family: 'Comic Sans MS', Times, serif;
+  font-size: 3rem;
+  margin-bottom: 10px;
+}
+
+.score-container {
+  border: 2px solid black; /* Svart kant */
+  border-radius: 30px; /* Rundade hörn */
+  padding: 20px; /* Utrymme runt hela innehållet */
+  background-color: #c2a39a; /* Bakgrundsfärg för hela containern */
+  width: 50%; /* Du kan justera bredden som du vill */
+  display: flex;
+  flex-direction: column; /* Behåll elementen i en kolumn */
+  align-items: center; /* Centrera innehållet horisontellt */
+}
+
+.score-text {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 70%;
+  margin-bottom: -5px;
   font-size: 2rem;
+  white-space: nowrap;
+}
+
+.score-text p {
+  margin: 0 10px; /* Lägger till ett horisontellt mellanrum mellan <p> elementen */
+}
+
+.score-number {
+  font-size: 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  width: 20%;
+  margin-bottom: 10px;
+}
+
+.history-container {
+  font-size: 1.2rem;
+  display: flex;
+  justify-content: space-between;
+  width: 30%;
+  margin-bottom: 0px;
 }
