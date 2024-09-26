@@ -16,8 +16,8 @@ let computerHistory = document.getElementById("computerHistory");
 
 
 // ARRAYS
-const playerScoreHistory = [];
-const computerScoreHistory = [];
+let playerScoreHistory = [];
+let computerScoreHistory = [];
 
 // DATA
 let playerRoll = 0;
@@ -26,6 +26,7 @@ let playerScore = 0;
 let computerScore = 0;
 
 loadGame();
+showScoreResult();
 // PROCESSES push the button
 button0.addEventListener("click", function() {
   getRandomIntForPlayer();
@@ -95,7 +96,7 @@ function scoreHistory() {
 // COOKIES
 function saveGame() {
   // Game saved into 2 cookies
-  document.cookie = "playerScore=" + playerScore + ";expires=Thu, 18 Dec 2025 12:00:00 UTC";
+  document.cookie = "playerScore=" + playerScore+ ";expires=Thu, 18 Dec 2025 12:00:00 UTC";
   document.cookie = "computerScore=" + computerScore + ";expires=Thu, 18 Dec 2025 12:00:00 UTC";
 }
 
