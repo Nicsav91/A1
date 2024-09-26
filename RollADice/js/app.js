@@ -19,8 +19,8 @@ let computerHistory = document.getElementById("computerHistory");
 
 
 // ARRAYS
-const playerScoreHistory = [0];
-const computerScoreHistory = [0];
+const playerScoreHistory = [];
+const computerScoreHistory = [];
 
 // DATA
 let playerRoll = 0;
@@ -91,6 +91,6 @@ function showScoreResult () {
 }
 
 function scoreHistory() {
-  playerHistory.innerHTML = playerScoreHistory;
-  computerHistory.innerHTML = computerScoreHistory;
+  playerHistory.innerHTML = "Player History: " + playerScoreHistory;
+  computerHistory.innerHTML = "Computer History: " + computerScoreHistory;
 }
