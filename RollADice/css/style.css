@@ -50,13 +50,6 @@ h1{
   color: black;
 }
 
-#playerRollText{
-  align-items: left;
-}
-
-#computerRollText {
-  align-items: right;
-}
 
 #button0 {
   font-family: 'Courier bold', Times, serif;
@@ -110,5 +103,4 @@ h1{
   display: flex;
   justify-content: space-between;
   width: 30%;
-  margin-bottom: 0px;
 }
