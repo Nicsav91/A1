@@ -10,19 +10,25 @@ body{
 
 h1{
   font-family: 'Courier New', Times, serif;
-  font-size: 3rem;
-  color: #a38982;
+  font-size: 4rem;
+  color: #a18780;
+}
+
+h1:hover {
+  color: white;
 }
 
 .game-container {
   border: 2px solid black; /* Svart kant */
   border-radius: 30px; /* Rundade hörn */
   padding: 10px; /* Utrymme runt hela innehållet */
-  background-color: #f0eceb; /* Bakgrundsfärg för hela containern */
+  /* background-color: #f0eceb; /* Bakgrundsfärg för hela containern */
+  background: linear-gradient(90deg, #e4d7d3, #eeebea, #eeebea, #eeebea, #e4d7d3);
   width: 50%; /* Du kan justera bredden som du vill */
   display: flex;
   flex-direction: column; /* Behåll elementen i en kolumn */
   align-items: center; /* Centrera innehållet horisontellt */
+  box-shadow: 5px 5px 20px #a18780;
 }
 
 .roll-conatiner {
@@ -33,10 +39,11 @@ h1{
   margin-bottom: -40px;
 }
 
+
 #typePlayerRollText, #typeComputerRollText {
   font-family: 'Georgia', Times, serif;
   font-size: 2rem;
-  color: #c3a49b;
+  color: #a18780;
 }
 
 .dice-number {
@@ -57,6 +64,11 @@ h1{
   color: black;
   background-color: #a28881;
   margin-bottom: -30px;
+  box-shadow: 0px 0px 0px 5px #cfc3bf;
+}
+
+#button0:hover {
+  color: white;
 }
 
 #evaluationRollText {
@@ -69,11 +81,13 @@ h1{
   border: 2px solid black; /* Svart kant */
   border-radius: 30px; /* Rundade hörn */
   padding: 20px; /* Utrymme runt hela innehållet */
-  background-color: #c2a39a; /* Bakgrundsfärg för hela containern */
+  /* background-color: #c2a39a; /* Bakgrundsfärg för hela containern */
+  background: linear-gradient(#a18780, #eeebea, #a18780);
   width: 50%; /* Du kan justera bredden som du vill */
   display: flex;
   flex-direction: column; /* Behåll elementen i en kolumn */
   align-items: center; /* Centrera innehållet horisontellt */
+  box-shadow: 5px 5px 20px #a18780;
 }
 
 .score-text {
